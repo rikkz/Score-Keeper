@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.rohit.scorekeeper.MainActivity"
+    android:weightSum="1">
+
+
+    <ImageView
+        android:layout_height="200dp"
+        android:layout_width="match_parent"
+        android:src="@drawable/redballcricket"
+        android:scaleType="centerCrop"
+        android:id="@+id/mainImage"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp">
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="text"
+            android:hint="( Team A )"
+            android:textSize="30sp"
+            android:gravity="center"
+            android:layout_marginRight="55dp"
+            android:id="@+id/TeamA"/>
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="text"
+            android:hint="( Team B )"
+            android:gravity="center"
+            android:textSize="30sp"
+            android:id="@+id/TeamB"/>
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="0"
+            android:textSize="40sp"
+            android:textColor="@android:color/black"
+            android:id="@+id/teamAscore"
+            android:layout_weight="1"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="-"
+            android:gravity="center"
+            android:textSize="40sp"
+            android:layout_weight="1"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:gravity="center"
+            android:textSize="40sp"
+            android:textColor="@android:color/black"
+            android:layout_weight="1"
+            android:id="@+id/teamBscore"/>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="16dp"
+        android:layout_marginLeft="16dp"
+
+        android:background="@android:color/black">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="1dp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="16dp">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <Button
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:text="+6"
+                android:id="@+id/teamA6"
+                android:onClick="incrementSixA"/>
+
+            <Button
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:text="+4"
+                android:id="@+id/teamA4"
+                android:onClick="incrementFourA"/>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <Button
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:text="+1"
+                    android:id="@+id/teamA1"
+                    android:onClick="incrementOneA"/>
+
+                <Button
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:text="+2"
+                    android:id="@+id/teamA2"
+                    android:onClick="incrementTwoA"/>
+
+                <Button
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:text="+3"
+                    android:id="@+id/teamA3"
+                    android:onClick="incrementThreeA"/>
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="SIX!!"
+                android:layout_marginBottom="16dp"
+                android:textSize="20sp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Boundary!!"
+                android:layout_marginBottom="16dp"
+
+                android:textSize="20sp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="EXTRAS!!"
+                android:textSize="20sp"/>
+
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_weight="1">
+
+            <Button
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="80dp"
+                android:text="+6"
+                android:id="@+id/teamB6"
+                android:onClick="incrementSixB"/>
+
+            <Button
+                android:layout_marginLeft="80dp"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:text="+4"
+                android:onClick="incrementFourB"
+                android:id="@+id/teamB4"/>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <Button
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:text="+3"
+                    android:id="@+id/teamB3"
+                    android:onClick="incrementThreeB"/>
+
+                <Button
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:text="+2"
+                    android:id="@+id/teamB2"
+                    android:onClick="incrementTwoB"/>
+
+                <Button
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:text="+1"
+                    android:id="@+id/teamB1"
+                    android:onClick="incrementOneB"/>
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="RESET!"
+        android:textSize="16sp"
+        android:id="@+id/resetButton"
+        android:onClick="reset"/>
+
+
+</LinearLayout>
