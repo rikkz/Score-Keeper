@@ -1,3 +1,9 @@
 <resources>
+    <string name="defaultA">( Team A )</string>
+    <string name="defaultB">( Team B )</string>
     <string name="app_name">Score Keeper</string>
+    <string name="run6">SIX!!</string>
+    <string name="run4">BOUNDARY!!</string>
+    <string name="extras">EXTRAS!!</string>
+
 </resources>

@@ -1,4 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_height="wrap_content"
+    android:layout_width="wrap_content">
+
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
@@ -22,20 +28,22 @@
         android:padding="16dp">
 
         <EditText
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_weight="1"
             android:inputType="text"
-            android:hint="( Team A )"
+            android:hint="@string/defaultA"
             android:textSize="30sp"
             android:gravity="center"
             android:layout_marginRight="55dp"
             android:id="@+id/TeamA"/>
 
         <EditText
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_weight="1"
             android:inputType="text"
-            android:hint="( Team B )"
+            android:hint="@string/defaultB"
             android:gravity="center"
             android:textSize="30sp"
             android:id="@+id/TeamB"/>
@@ -160,14 +168,14 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="SIX!!"
+                android:text="@string/run6"
                 android:layout_marginBottom="16dp"
                 android:textSize="20sp"/>
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Boundary!!"
+                android:text="@string/run4"
                 android:layout_marginBottom="16dp"
 
                 android:textSize="20sp"/>
@@ -175,7 +183,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="EXTRAS!!"
+                android:text="@string/extras"
                 android:textSize="20sp"/>
 
 
@@ -247,3 +255,4 @@
 
 
 </LinearLayout>
+</ScrollView>

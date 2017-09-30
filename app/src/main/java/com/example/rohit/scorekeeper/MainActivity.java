@@ -6,7 +6,7 @@ import android.view.View;
 import android.widget.TextView;
 
 class Score{
-    int score;
+    private int score;
     Score()
     {
         score = 0;
@@ -15,14 +15,17 @@ class Score{
     {
         score += num;
     }
+    void setZero(){ score = 0; }
+    int getScore(){ return score; }
 }
 
 
 public class MainActivity extends AppCompatActivity {
 
-    Score A , B;
+    Score A;
+    Score B;
 
-    MainActivity()
+    public MainActivity()
     {
         A = new Score();
         B = new Score();
@@ -99,8 +102,8 @@ public class MainActivity extends AppCompatActivity {
 
     void reset( View view)
     {
-        A.score = 0;
-        B.score = 0;
+        A.setZero();
+        B.setZero();
         displayA();
         displayB();
     }
@@ -108,13 +111,13 @@ public class MainActivity extends AppCompatActivity {
     void displayA()
     {
         TextView teamA = (TextView) findViewById(R.id.teamAscore);
-        teamA.setText("" + A.score);
+        teamA.setText(String.valueOf(A.getScore()));
     }
 
     void displayB()
     {
         TextView teamA = (TextView) findViewById(R.id.teamBscore);
-        teamA.setText("" + B.score);
+        teamA.setText(String.valueOf(B.getScore()));
     }
 
 
